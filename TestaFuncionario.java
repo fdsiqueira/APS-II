@@ -1,0 +1,57 @@
+package Aula08;
+import javax.swing.*;
+
+public class TestaFuncionario {
+
+	public static void main(String[] args) {
+		
+		Gerente gerente = new Gerente();
+		gerente.setNome("Carlos Vieira");
+		gerente.setSalario(3000.58);
+		gerente.setUsuario("carlos.vieira");
+		gerente.setSenha("5523");
+		
+		Funcionario funcionario = new Funcionario();
+		funcionario.setNome("Pedro Castelo");
+		funcionario.setSalario(1500);
+		
+		Telefonista telefonista = new Telefonista();
+		telefonista.setNome("Luana Brana");
+		telefonista.setSalario(1300.00);
+		telefonista.setEstacaoDeTrabalho(20);
+		
+		Secretaria secretaria = new Secretaria();
+		secretaria.setNome("Maria Ribeiro");
+		secretaria.setSalario(1125.25);
+		secretaria.setRamal(5);
+		
+		System.out.println("##### Gerente #####");
+		System.out.println("Nome.: "+gerente.getNome());
+		System.out.println("Salário.: R$"+gerente.getSalario());
+		System.out.println("Usuário.: "+gerente.getUsuario());
+		System.out.println("Senha.: "+gerente.getSenha());
+		System.out.println("Bonificação.: R$"+gerente.calculaBonificacao());
+		System.out.println();
+		
+		System.out.println("##### Funcionário #####");
+		System.out.println("Nome.: "+funcionario.getNome());
+		System.out.println("Salário.: R$"+funcionario.getSalario());
+		System.out.println("Bonificação.: R$"+funcionario.calculaBonificacao());
+		System.out.println();
+		
+		System.out.println("##### Telefonista #####");
+		System.out.println("Nome.: "+telefonista.getNome());
+		System.out.println("Salário.: R$"+telefonista.getSalario());
+		System.out.println("Estação de Trabalho.: "+telefonista.getEstacaoDeTrabalho());
+		System.out.println("Bonificação.: R$"+telefonista.calculaBonificacao());
+		System.out.println();
+		
+		System.out.println("##### Secretária #####");
+		System.out.println("Nome.: "+secretaria.getNome());
+		System.out.println("Salário.: R$"+secretaria.getSalario());
+		System.out.println("Ramal.: "+secretaria.getRamal());
+		System.out.println("Bonificação.: R$"+secretaria.calculaBonificacao());
+		System.out.println();
+	}
+
+}
